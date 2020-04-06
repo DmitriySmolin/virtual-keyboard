@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:
+        0;
+}
+
+.container {
+    width: 100%;
+}
+
+.second-line .item,
+.third-line .item,
+.fourth-line .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textarea {
+    display: block;
+    width: 500px;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: inherit;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.keyboard {
+    margin-top: 38px;
+    border: 1px solid black;
+    width: 632px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.line {
+    display: flex;
+}
+
+.fith-line {
+    justify-content: flex-end;
+}
+
+.sixth-line {
+    width: 76%;
+    margin-top: -47px;
+}
+
+.item {
+    border: 1px solid black;
+    background: whitesmoke;
+    width: 50px;
+    height: 47px;
+    text-align: left;
+    padding: 2px;
+    font-size: 12px;
+    box-shadow: 0px 0px 13px 0px powderblue;
+
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+span {
+    width: 12px;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.Tab {
+    width: 65px;
+}
+
+.Enter {
+    width: 72px;
+}
+
+.ArrowUp {
+    margin-bottom: -9px;
+    margin-top: -47px;
+    margin-right: -102px;
+}
+
+.AltLeft,
+.AltRight,
+.Enter,
+.CapsLock,
+.Backspace {
+    text-align: center;
+    line-height: 37px;
+}
+
+.Backspace {
+    width: 57px;
+    line-height: 37px;
+}
+
+.third-line .item.CapsLock {
+    width: 68px;
+    justify-content: flex-start;
+}
+
+.ArrowLeft {
+    width: 52px;
+}
+
+.ShiftLeft,
+.ShiftRight,
+.Tab,
+.ControlLeft,
+.ControlRight {
+    line-height: 37px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ShiftLeft {
+    width: 73px;
+    margin-left: 0px;
+}
+
+.ShiftRight {
+    width: 59px;
+    margin-left: 49px;
+}
+
+.MetaLeft,
+.MetaRight,
+.Space,
+.ArrowUp,
+.ArrowLeft,
+.ArrowDown,
+.ArrowRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Space {
+    width: 324px;
+    display: flex;
+
+}
+
+.active {
+    background: powderblue;
+}
