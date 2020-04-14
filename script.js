@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 /* eslint-disable guard-for-in */
 /* eslint-disable no-undef */
 /* eslint-disable array-callback-return */
@@ -6,8 +5,9 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-useless-escape */
 document.addEventListener('DOMContentLoaded', () => {
-  const en = [
-    [{ Backquote: ['~', '`'] },
+  const ENGLISH_BUTTONS = [
+    [
+      { Backquote: ['~', '`'] },
       {
         Digit1: ['!', '1'],
       },
@@ -48,195 +48,187 @@ document.addEventListener('DOMContentLoaded', () => {
         Backspace: ['Backspace'],
       },
     ],
-    [{
-      Tab: ['Tab'],
-    },
-    {
-      KeyQ: ['Q'],
-    },
-    {
-      KeyW: ['W'],
-    },
-    {
-      KeyE: ['E'],
-    },
-    {
-      KeyR: ['R'],
-    },
-    {
-      KeyT: ['T'],
-    },
-    {
-      KeyY: ['Y'],
-    },
-    {
-      KeyU: ['U'],
-    },
-    {
-      KeyI: ['I'],
-    },
-    {
-      KeyO: ['O'],
-    },
-    {
-      KeyP: ['P'],
-    },
-    {
-      BracketLeft: ['['],
-    },
-    {
-      BracketRight: [']'],
-    },
-    {
-      Backslash: ['/', '\\'],
-    },
-    {
-      Delete: ['DEL'],
-    },
+    [
+      {
+        Tab: ['Tab'],
+      },
+      {
+        KeyQ: ['Q'],
+      },
+      {
+        KeyW: ['W'],
+      },
+      {
+        KeyE: ['E'],
+      },
+      {
+        KeyR: ['R'],
+      },
+      {
+        KeyT: ['T'],
+      },
+      {
+        KeyY: ['Y'],
+      },
+      {
+        KeyU: ['U'],
+      },
+      {
+        KeyI: ['I'],
+      },
+      {
+        KeyO: ['O'],
+      },
+      {
+        KeyP: ['P'],
+      },
+      {
+        BracketLeft: ['['],
+      },
+      {
+        BracketRight: [']'],
+      },
+      {
+        Backslash: ['/', '\\'],
+      },
+      {
+        Delete: ['DEL'],
+      },
     ],
-    [{
-      CapsLock: ['CapsLock'],
-    },
-    {
-      KeyA: ['A'],
-    },
-    {
-      KeyS: ['S'],
-    },
-    {
-      KeyD: ['D'],
-    },
-    {
-      KeyF: ['F'],
-    },
-    {
-      KeyG: ['G'],
-    },
-    {
-      KeyH: ['H'],
-    },
-    {
-      KeyJ: ['J'],
-    },
-    {
-      KeyK: ['K'],
-    },
-    {
-      KeyL: ['L'],
-    },
-    {
-      Semicolon: [';'],
-    },
-    {
-      Semicolon: ['\''],
-    },
+    [
+      {
+        CapsLock: ['CapsLock'],
+      },
+      {
+        KeyA: ['A'],
+      },
+      {
+        KeyS: ['S'],
+      },
+      {
+        KeyD: ['D'],
+      },
+      {
+        KeyF: ['F'],
+      },
+      {
+        KeyG: ['G'],
+      },
+      {
+        KeyH: ['H'],
+      },
+      {
+        KeyJ: ['J'],
+      },
+      {
+        KeyK: ['K'],
+      },
+      {
+        KeyL: ['L'],
+      },
+      {
+        Semicolon: [';'],
+      },
+      {
+        Semicolon: ["'"],
+      },
 
-    {
-      Enter: ['Enter'],
-    },
+      {
+        Enter: ['Enter'],
+      },
     ],
-    [{
-      ShiftLeft: ['Shift'],
-    },
-    {
-      Quote: ['\\'],
-    },
-    {
-      KeyZ: ['Z'],
-    },
-    {
-      KeyX: ['X'],
-    },
-    {
-      KeyC: ['C'],
-    },
-    {
-      KeyV: ['V'],
-    },
-    {
-      KeyB: ['B'],
-    },
-    {
-      KeyN: ['N'],
-    },
-    {
-      KeyM: ['M'],
-    },
-    {
-      Comma: ['.'],
-    },
-    {
-      Period: [','],
-    },
-    {
-      Slash: ['/'],
-    },
-    {
-      ShiftRight: ['Shift'],
-    },
+    [
+      {
+        ShiftLeft: ['Shift'],
+      },
+      {
+        Quote: ['\\'],
+      },
+      {
+        KeyZ: ['Z'],
+      },
+      {
+        KeyX: ['X'],
+      },
+      {
+        KeyC: ['C'],
+      },
+      {
+        KeyV: ['V'],
+      },
+      {
+        KeyB: ['B'],
+      },
+      {
+        KeyN: ['N'],
+      },
+      {
+        KeyM: ['M'],
+      },
+      {
+        Comma: ['.'],
+      },
+      {
+        Period: [','],
+      },
+      {
+        Slash: ['/'],
+      },
+      {
+        ShiftRight: ['Shift'],
+      },
     ],
-    [{
-      ArrowUp: ['↑'],
-    },
-    {
-      ArrowLeft: ['←'],
-    },
-    {
-      ArrowDown: ['↓'],
-    },
-    {
-      ArrowRight: ['→'],
-    },
+    [
+      {
+        ArrowUp: ['↑'],
+      },
+      {
+        ArrowLeft: ['←'],
+      },
+      {
+        ArrowDown: ['↓'],
+      },
+      {
+        ArrowRight: ['→'],
+      },
     ],
 
-    [{
-      ControlLeft: ['Ctrl'],
-    },
-    {
-      MetaLeft: ['⊞'],
-    },
-    {
-      AltLeft: ['Alt'],
-    },
-    {
-      Space: ['Space'],
-    },
-    {
-      AltRight: ['Alt'],
-    },
-    {
-      MetaRight: ['⊞'],
-    },
-    {
-      ControlRight: ['Ctrl'],
-    },
+    [
+      {
+        ControlLeft: ['Ctrl'],
+      },
+      {
+        MetaLeft: ['⊞'],
+      },
+      {
+        AltLeft: ['Alt'],
+      },
+      {
+        Space: ['Space'],
+      },
+      {
+        AltRight: ['Alt'],
+      },
+      {
+        MetaRight: ['⊞'],
+      },
+      {
+        ControlRight: ['Ctrl'],
+      },
     ],
   ];
 
-  const createItem = (newClass, attr, itemOne, itemTwo) => `
-                <div
-                onmousedown="return false" 
-                onselectstart="return false"
-                class="item ${newClass || ''}"
-                data="${attr}">
-                <span> 
-                ${itemOne}<br>
-                ${itemTwo || ''}
-                </span>
-                </div>`;
-
-  const addClass = () => {
-    const lines = [
-      'first-line',
-      'second-line',
-      'third-line',
-      'fourth-line',
-      'fith-line',
-      'sixth-line',
-    ];
-    const line = document.querySelectorAll('.line');
-    return line.forEach((el, i) => el.classList.add(lines[i]));
-  };
+  const createItem = (newClass, keyButton, itemOne, itemTwo) => `
+   <div
+   onmousedown="return false" 
+   onselectstart="return false"
+   class="item ${newClass || ''}"
+   data="${keyButton}">
+    <span> 
+   ${itemOne}<br>
+   ${itemTwo || ''}
+   </span>
+   </div>`;
 
   const showKeyboard = (keyboard) => {
     let out = '<div class="container">';
@@ -260,38 +252,33 @@ document.addEventListener('DOMContentLoaded', () => {
     out += '</div>';
     out += '</div>';
     document.body.innerHTML = out;
-
-    addClass();
   };
 
-  const keyboardActive = (event) => {
-    const {
-      code,
-    } = event;
-    [...document.querySelectorAll('.item')].map((elem) => {
-      const attr = elem.getAttribute('data');
-      if (code === attr) elem.classList.toggle('active');
-    });
+  const keyboardActive = ({ code, target } = event) => {
+    if (target.tagName === 'TEXTAREA')
+      document.querySelectorAll('.item').forEach((elem) => {
+        const attr = elem.getAttribute('data');
+        if (code === attr) elem.classList.toggle('active');
+      });
   };
 
-  const keyboardRemove = (event) => {
-    const {
-      code,
-    } = event;
-
+  const keyboardRemove = ({ code } = event) => {
     document.querySelectorAll('.item').forEach((elem) => {
       const attr = elem.getAttribute('data');
-
       if (code === attr && code !== 'CapsLock') {
         elem.classList.remove('active');
       }
     });
   };
 
-  const clickButton = (event) => {
-    const {
-      target,
-    } = event;
+  const clickButton = ({ target } = event) => {
+    if (
+      target.classList.contains('textarea') ||
+      target.classList.contains('container')
+    ) {
+      return false;
+    }
+
     const input = document.querySelector('.textarea');
     const capsLock = document.querySelector('.CapsLock');
     const str = target.innerText;
@@ -301,14 +288,14 @@ document.addEventListener('DOMContentLoaded', () => {
     target.classList.toggle('active');
 
     if (res[0] === 'Tab') {
-      return input.value += ' ';
+      return (input.value += ' ');
     }
 
     if (res[0] === 'DEL') {
       return input.setRangeText(
         '',
         input.selectionStart,
-        input.selectionEnd + 1,
+        input.selectionEnd + 1
       );
     }
 
@@ -317,20 +304,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (
-      res[0] === '⊞'
-      || res[0] === 'Shift'
-      || res[0] === 'Ctrl'
-      || res[0] === 'Alt'
-      || res[0] === 'Space'
+      res[0] === '⊞' ||
+      res[0] === 'Shift' ||
+      res[0] === 'Ctrl' ||
+      res[0] === 'Alt' ||
+      res[0] === 'Space'
     ) {
-      return;
+      return false;
     }
 
     if (res[0] === 'Enter') {
       return (input.value += '\n');
     }
     if (res[0] === 'CapsLock') {
-      return;
+      return false;
     }
 
     if (capsLock.classList.contains('active')) {
@@ -342,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const removeActiveButton = () => {
     setTimeout(() => {
-      [...document.querySelectorAll('.item')].map((el) => {
+      document.querySelectorAll('.item').forEach((el) => {
         if (el.getAttribute('data') !== 'CapsLock') {
           el.classList.remove('active');
         }
@@ -350,15 +337,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
   };
 
-  showKeyboard(en);
+  showKeyboard(ENGLISH_BUTTONS);
 
-  document
-    .querySelector('.textarea')
-    .addEventListener('keydown', keyboardActive);
-
-  document.querySelector('.textarea').addEventListener('keyup', keyboardRemove);
-
-  [...document.querySelectorAll('.line')].map((el) => el.addEventListener('click', clickButton));
-
-  [...document.querySelectorAll('.line')].map((el) => el.addEventListener('click', removeActiveButton));
+  document.body.addEventListener('keydown', keyboardActive);
+  document.body.addEventListener('keyup', keyboardRemove);
+  document.body.addEventListener('click', clickButton);
+  document.body.addEventListener('click', removeActiveButton);
 });

@@ -9,13 +9,13 @@
     width: 100%;
 }
 
-.second-line .item,
+/* .second-line .item,
 .third-line .item,
 .fourth-line .item {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .textarea {
     display: block;
@@ -40,6 +40,21 @@
     margin-top: 80px;
 }
 
+.keyboard>.line:nth-child(2n+4) .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard>.line:nth-child(5) {
+    justify-content: flex-end;
+}
+
+.keyboard>.line:nth-child(6) {
+    width: 76%;
+    margin-top: -47px;
+}
+
 .input:focus {
     outline: none;
 }
@@ -48,14 +63,6 @@
     display: flex;
 }
 
-.fith-line {
-    justify-content: flex-end;
-}
-
-.sixth-line {
-    width: 76%;
-    margin-top: -47px;
-}
 
 .item {
     border: 1px solid black;
@@ -107,7 +114,8 @@ span {
     line-height: 37px;
 }
 
-.third-line .item.CapsLock {
+
+.keyboard>.line:nth-child(3) .item.CapsLock {
     width: 68px;
     justify-content: flex-start;
 }
